@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Re-Engagement Email 2.0</title>
+
+    <!-- For the Whole Email Font -->
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <style type="text/css">
+    	body {
+    		max-width: 600px;
+    		width: 100%;
+    		margin-left: auto;
+    		margin-right: auto;
+    		margin-top: 15px;
+    		background: rgb(245,245,245);
+    	}
+
+    	.email-template {
+    		background: rgb(255,255,255) !important;
+    	}
+
+    	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, .btn {
+    		font-family: 'Titillium Web', Arial, sans-serif;
+    	}
+
+    	a {
+    		color: rgb(38,181,214);
+    		text-decoration: none;
+    		font-weight: bold;
+    	}
+
+    	a:after {
+    		clear: both;
+    		content: "";
+    	}
+
+    	a:hover {
+    		color: rgb(38,181,214);
+    		text-decoration: none;
+    	}
+
+    	p {
+    		font-size: 14px;
+		    line-height: 1.42857143;
+		    color: rgb(51,51,51);
+    	}
+
+    	header {
+    		background: url(imgs/dazadi-header.jpg) no-repeat;
+			height: auto;
+    	}
+
+    	header img {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		/*** Navigation ***/
+		#nav {
+			text-align: center;
+			background: rgb(37,37,37);
+			padding-left: 0;
+			max-width: 600px;
+			width: 100%;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		#nav li {
+			display: inline;
+		}
+
+		#nav a {
+			font-size: 0.90em;
+			color: rgb(205,217,41);
+			text-decoration: none; 
+			text-transform: uppercase;
+			padding: 2% 1.75%; /* variable width */
+		}
+
+		.img-responsive {
+			width: 100%;
+			height: auto;
+		}
+
+		h3.closing-par {
+			font-family: 'Pacifico', cursive;
+			font-size: 24px;
+			font-weight: normal;
+			color: rgb(128,130,133);
+			letter-spacing: 1px;
+		}
+
+		.social-medias {
+			padding-left: 0;
+		}
+
+		.social-medias li {
+			list-style: none;
+			display: inline;
+			padding: 1%;
+		}
+
+		footer {
+			color: rgb(255,255,255);
+			background: rgb(37,37,37);
+			padding: 1%;
+		}
+
+		footer p {
+			color: rgb(193,191,191) !important;
+			font-size: 0.75em;
+		}
+
+		/*-----------------------------------------
+					Bootstrap Alternative
+		-----------------------------------------*/
+		.pre-header {
+			padding: 5px 10px;
+		}
+
+		.pre-header p {
+			font-size: 1.7vh;
+			font-family: 'Titillium Web', Arial, sans-serif;
+			margin: 0;
+			line-height: 1;
+		}
+
+		.pre-header img {
+			margin: auto;
+		}
+
+		.clearfix:after{
+			display:block;
+			clear:both;
+			content:'';
+		}
+
+		.container-fluid {
+		  padding-right: 15px;
+		  padding-left: 15px;
+		  margin-right: auto;
+		  margin-left: auto;
+		}
+
+		.row {
+		  margin-right: -15px;
+		  margin-left: -15px;
+		}
+
+		.container {
+		    display: grid;
+		    grid-template-columns: 73% auto;
+		    grid-template-rows: auto;
+		}
+
+		#email-content {
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+
+		/*-----------------------------------------
+					Button Styles
+		-----------------------------------------*/
+		.btn {
+			margin: 3%;
+		}
+
+		span.sign-up-btn a {
+    		font-size: 3em;
+		    color: rgb(255,255,255);
+		    text-decoration: none;
+		    font-weight: bold;
+		    background: rgb(38,181,214);
+		    padding: 2% 5%;
+		    border-radius: 10px;
+    	}
+
+    	span.sign-up-btn a:hover {
+    		text-decoration: none;
+    		background: rgb(34,160,189);
+    		-webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          			transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    	}
+
+    	span.shop-now-btn a {
+    		font-size: 1.5em;
+		    color: rgb(255,255,255);
+		    text-decoration: none;
+		    font-weight: bold;
+		    background: rgb(204,24,121);
+		    padding: 2% 5%;
+		    border-radius: 10px;
+    	}
+
+    	span.shop-now-btn a:hover {
+    		text-decoration: none;
+    		background: rgb(180,22,107);
+    		-webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          			transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    	}
+
+    	@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+
+    </style>
+  </head>
+  <body>
+  	<div class="email-template">
+	  	<div class="container pre-header clearfix">
+		  <div class=""><p>Exclusive Offers and Benefits to Dazadi's Friends and Family</p></div>
+		  <div>
+		  	<img src="imgs/free-shipping.png" class="img-responsive" style="width: 80%; height: auto; float: right;">
+		  </div>
+		</div>
+
+	  	<!-- Header -->
+	  	<header class="container-fluid">
+	  		<div class="row">
+	  			<center>
+	  				<a href="https://www.dazadi.com/">
+	  					<img src="imgs/dazadi-logo.png" style="width: 212px; height: auto;">	  					
+	  				</a>
+	  			</center>
+	  		</div>
+	  	</header>
+
+	  	<!-- Navigation -->
+	  	<div class="container-fluid">
+	  		<div class="row">
+		  	<nav class="topnav">
+				<ul id="nav">
+				  <li><a href="https://www.dazadi.com/home-fitness/">Home Fitness</a> <span style="color: rgb(242,242,242);">|</span></li>
+				  <li><a href="https://www.dazadi.com/game-room-indoor-activities/">Game Room</a> <span style="color: rgb(242,242,242);">|</span></li>
+				  <li><a href="https://www.dazadi.com/patio-pool/">Patio and Pool</a> <span style="color: rgb(242,242,242);">|</span></li>
+				  <li><a href="https://www.dazadi.com/outdoor-activities/">Outdoor Activities</a> </li>
+				</ul>
+			</nav>
+			</div>
+		</div>
+
+		<!-- Email Key Visual Here. Editable -->
+		<div class="container-fluid">
+			<div class="row">
+				<img src="imgs/kv-main-image-reeng-1.jpg" class="img-responsive" alt="We're giving our best offer to you, because WE WANT YOU BACK in the Family. $25 OFF. Purchase of $200 or More" />
+			</div>
+		</div>
+
+		<!-- Email Content Goes Here -->
+		<div class="container-fluid">
+			<div class="row">
+				<div id="email-content">
+					<h2>Hey Amy!</h2>
+
+					<p>Welcome back to Dazadi! You're receiving this email because you purchased from us before. We hope you had a great experience... One you'd happily like to repeat! Why, you ask?</p>
+
+					<p>For starters, you like to have fun. You love spending time with family and friends. Most of all, you want to save money. That's where Dazadi comes in...</p>
+
+					<p>Dazadi is the web's leading resource for products that let you "ditch the digital" to completely reconnect with family and friends. Games and entertainment that put the "family" back in family time. No screens. No log ons. Nothing to get in the way of the pure, simple fun you all participate in. All at a price that's hard to beat.</p>
+
+					<p><strong>Sounds great. Now what?</strong></p>
+
+					<p>At Dazadi, we make family fun simple and affordable. So if you'd like to receive special promotions on our latest items, simply click below. We'll keep you up to date on items that are sure to become family favorites for years to come.</p>
+				<br/>
+					<!-- Sign Up Button -->
+					<center>
+						<span type="button" class="sign-up-btn">
+							<a href="#">Sign Me Up!</a>
+						</span>
+					</center>
+				<br/>
+
+					<p><strong>NOTE:</strong> If now isn't a good time for you to consider this offer, that's okay. We'll touch base again later.</p>
+
+				<br/>
+					<center>
+						<span type="button" class="shop-now-btn">
+							<a href="https://www.dazadi.com/" class="shop-now-btn">Shop at Dazadi Now</a>
+						</span>
+					</center>
+				
+					<!-- Closing Par / Signature -->
+					<center>
+						<h3 class="text-center closing-par">Cheers, Your Dazadi Family</h3>
+					</center>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Social Medias -->
+	    	<center>
+		    	<ul class="social-medias">
+		    		<li><a href="https://www.facebook.com/dazadi.com"><img src="imgs/facebook-icon.png" alt="Facebook Icon" /></a></li>
+		    		<li><a href="https://twitter.com/Dazadi"><img src="imgs/twitter-icon.png" alt="Twitter Icon" /></a></li>
+		    		<li><a href="https://www.youtube.com/dazadi"><img src="imgs/youtube-icon.png" alt="YouTube Icon" /></a></li>
+		    		<li><a href="https://www.pinterest.com/dazadi"><img src="imgs/pinterest-icon.png" alt="Pinterest Icon" /></a></li>
+		    		<li><a href="https://www.instagram.com/dazadi/"><img src="imgs/instagram-icon.png" alt="Instagram Icon" /></a></li>
+		    	</ul>
+	    	</center> 
+
+			<!-- Dazadi Story -->
+	    	<div class="container-fluid">
+		    	<div class="row">
+		    		<div class="daz-story">
+		    			<a href="https://www.dazadi.com/about-us/#dazadihistory"><img src="imgs/dazadi-story.jpg" alt="What is dazadi, anyway? Click here to read out awesome story." class="img-responsive" alt="What is Dazadi, anyway? Click here to read our awesome story." /></a>
+		    		</div>
+		    	</div>
+	    	</div> 
+
+	    <!-- Footer -->
+	    <footer class="container-fluid">
+	    	<div class="row">
+	    		<center>
+	    			<p>Copyright© 2018, All rights reserved<br/>You are receiving this email because you have expressed interest in our newsletter.</p>
+	    			<p>Add us to your address book</p>
+	    			<p style="padding-bottom: 0;">Want to change how you receive these emails?<br/>You can <a href="#">update your preferences</a> or <a href="#">unsubscribe</a> from this list.</p>
+	    		</center>
+	    	</div>
+	    </footer>
+	    
+
+    </div>
+  </body>
+</html>
